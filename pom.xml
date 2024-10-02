@@ -24,7 +24,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <jvmArguments>-XX:+PrintCommandLineFlags -XX:MaxGCPauseMillis=200</jvmArguments>
+                    <jvmArguments>
+                        -XX:+PrintCommandLineFlags -XX:MaxGCPauseMillis=200 -Xlog:gc*:file=gc.log:tags,uptime,time,level
+                    </jvmArguments>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
